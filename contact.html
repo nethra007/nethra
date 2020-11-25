@@ -1,0 +1,61 @@
+{% extends 'basic.html' %}
+{% block title %}
+Contact
+{% endblock title %}
+{% block body %}
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-6">
+<br>
+<h2><span class="badge badge-info">Contact Us</span></h2>
+
+
+<form action="/contact" method="post">{% csrf_token %}
+
+
+<div class="form-group">
+<label for="name">Name</label>
+<input type="text" class="form-control" name="name" id="name"  required>
+</div>
+<div class="form-group">
+
+<label for="email">Email Address</label>
+<input type="email" class="form-control" name="email" id="email" required>
+
+</div>
+
+<div class="form-group">
+<label for="num">Phone No.</label>
+<input type="number" class="form-control" name="num" id="num" required>
+</div>
+
+<div class="form-group">
+<label for="desc">How Can I Help You?</label>
+<textarea type="text" class="form-control" name="desc" id="desc" required></textarea>
+</div>
+
+<button type="submit" class="btn btn-dark btn-sm btn-block">Submit</button>
+<br>
+</form>
+</div>
+
+<div class="col-md-6">
+<div class="card text-white bg-info mb-3 mt-4">
+  <div class="card-header">Nethra</div>
+  <div class="card-body">
+    <h5 class="card-title">CONTACT</h5>
+    <p class="card-text">Contact me if you have ANY QUESTIONS or ANY QUESTION?</p>
+</div>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+{% endblock body %}
